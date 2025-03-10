@@ -1,1 +1,53 @@
-m
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lämpötilamuunnin</title>
+    <!-- Font Awesome -ikonit -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Lämpötilamuunnin</h1>
+
+        <!-- Lämpötilan syöttö -->
+        <label for="temp">Syötä lämpötila:</label>
+        <input type="number" id="temp" placeholder="Lämpötila">
+
+        <!-- Lähdeyksikkö ja Kohdeyksikkö vierekkäin Gridillä -->
+        <div class="unit-selects">
+            <div>
+                <label for="fromUnit">Valitse yksikkö:</label>
+                <select id="fromUnit">
+                    <option value="Celsius">Celsius (°C)</option>
+                    <option value="Fahrenheit">Fahrenheit (°F)</option>
+                    <option value="Kelvin">Kelvin (K)</option>
+                </select>
+            </div>
+
+            <!-- Nuoli oikealle -->
+            <span class="arrow"><i class="fas fa-arrow-right"></i></span>
+
+            <div>
+                <label for="toUnit">Yksikkö johon haluat muuntaa:</label>
+                <select id="toUnit">
+                    <option value="Celsius">Celsius (°C)</option>
+                    <option value="Fahrenheit">Fahrenheit (°F)</option>
+                    <option value="Kelvin">Kelvin (K)</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Muunna-painike -->
+        <button onclick="convertTemperature()">Muunna</button>
+
+        <!-- Tulos -->
+        <div class="result hidden" id="result"></div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
